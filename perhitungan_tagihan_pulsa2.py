@@ -62,6 +62,14 @@ with open(nama_file, 'w') as outf:
                          'Tagihan kuota terpakai (Rp)': totalkuota2,
                          'Tagihan/minggu (Rp)': total_tagihan
                         })
-                         
+list_tagihan = [data[i][8] for i in range(len(data))]
+jumlah_tagihan = 0
+for row in data:
+    jumlah_tagihan += row[8]
+
+tagihan_akhir,potongan = discount(jumlah_tagihan)
+    
+print("Jumlah tagihan", nama, "dengan No. telepon", no_telp, "pada bulan ini adalah sebesar Rp.", jumlah_tagihan)
+print("Anda mendapatkan potongan sebesar", potongan, "maka jumlah akhir tagihan anda adalah", tagihan_akhir)                         
                          
         
