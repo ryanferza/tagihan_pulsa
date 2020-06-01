@@ -68,8 +68,7 @@ for row in data:
     jumlah_tagihan += row[8]
 
 tagihan_akhir,potongan = discount(jumlah_tagihan)
-    
-print("Jumlah tagihan", nama, "dengan No. telepon", no_telp, "pada bulan ini adalah sebesar Rp.", jumlah_tagihan)
-print("Anda mendapatkan potongan sebesar", potongan, "maka jumlah akhir tagihan anda adalah", tagihan_akhir)                         
-                         
+
+print("Jumlah tagihan", nama, "dengan No. telepon", no_telp, "selama", jml_minggu ,"minggu adalah sebesar Rp.", jumlah_tagihan)
+print("Anda mendapatkan potongan sebesar", potongan, "maka jumlah akhir tagihan anda adalah", tagihan_akhir)
         
