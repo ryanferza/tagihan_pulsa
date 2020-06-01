@@ -67,6 +67,7 @@ jumlah_tagihan = 0
 for row in data:
     jumlah_tagihan += row[8]
 
+jml_minggu = len(data)
 tagihan_akhir,potongan = discount(jumlah_tagihan)
 
 print("Jumlah tagihan", nama, "dengan No. telepon", no_telp, "selama", jml_minggu ,"minggu adalah sebesar Rp.", jumlah_tagihan)
