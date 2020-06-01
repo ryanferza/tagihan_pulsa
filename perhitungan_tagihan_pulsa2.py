@@ -35,13 +35,33 @@ while input_data:
     
     data.append([minggu,total_sms,menit_tlp_sama,menit_tlp_lain,totalpulsa,total_kuota_sosmed,total_kuota_lainnya,totalkuota2,total_tagihan])
 
-print(data)
-
 print("--------------------------------------------------------------------------------")
-print('Minggu ke-\t Jumlah SMS\t Menit telepon ke sesama operator(menit)\t Menit telepon ke operaator lain(menit)\t Total pulsa (Rp)\t Kuota sosmed (kb)\t Kuota lainnya (kb)\t Tagihan kuota terpakai (Rp)\t Tagihan/minggu')
+
+print('Minggu ke-\t Jumlah SMS\t Menit telepon ke sesama operator\t Menit telepon ke operator lain\t Total pulsa (Rp)\t Kuota sosmed (kb)\t Kuota lainnya (kb)\t Tagihan kuota terpakai (Rp)\t Tagihan/minggu (Rp)')
 
 for i in range(0,len(data)):
     print(data[i][0],'\t', data[i][1], '\t',data[i][2], '\t',data[i][3], '\t',data[i][4], '\t',data[i][5], '\t',data[i][6], '\t',data[i][7], '\t',data[i][8])
     i += 1
 
 print("--------------------------------------------------------------------------------")
+
+with open(nama_file, 'w') as outf:
+    header = ['Minggu ke-','Jumlah SMS','Menit telepon ke sesama operator','Menit telepon ke operator lain','Total pulsa (Rp)','Kuota sosmed (kb)','Kuota lainnya (kb)','Tagihan kuota terpakai (Rp)','Tagihan/minggu (Rp)']
+    writer = csv.DictWriter(outf, fieldnames=header)
+    writer.writeheader()
+    
+    for row in data:
+        minggu,total_sms,menit_tlp_sama,menit_tlp_lain,totalpulsa,total_kuota_sosmed,total_kuota_lainnya,totalkuota2,total_tagihan = row
+        writer.writerow({'Minggu ke-': minggu,
+                         'Jumlah SMS': total_sms,
+                         'Menit telepon ke sesama operator': menit_tlp_sama,
+                         'Menit telepon ke operator lain': menit_tlp_lain,
+                         'Total pulsa (Rp)': total_pulsa,
+                         'Kuota sosmed (kb)': total_kuota_sosmed,
+                         'Kuota lainnya (kb)': total_kuota_lainnya,
+                         'Tagihan kuota terpakai (Rp)': totalkuota2,
+                         'Tagihan/minggu (Rp)': total_tagihan
+                        })
+                         
+                         
+        
