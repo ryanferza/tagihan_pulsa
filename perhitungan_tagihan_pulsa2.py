@@ -27,7 +27,7 @@ while input_data: #iterasi data
     total_kuota_sosmed = float(input("Jumlah kuota terpakai untuk sosial media (kb): "))
     total_kuota_lainnya = float(input("Jumlah kuota terpakai untuk lainnya (kb): "))
     totalkuota1 = total_kuota_sosmed + total_kuota_lainnya
-    totalkuota2 = 5*totalkuota1
+    totalkuota2 = 0.005*totalkuota1
     totalpulsatlp = 70*menit_tlp_sama + 100*menit_tlp_lain
     pulsasms = 50*total_sms
     totalpulsa = pulsasms + totalpulsatlp
@@ -38,10 +38,10 @@ while input_data: #iterasi data
 
 print("--------------------------------------------------------------------------------")
 #tabel pada program
-print('Minggu ke-\t Jumlah SMS\t Menit telepon ke sesama operator\t Menit telepon ke operator lain\t Total pulsa (Rp)\t Kuota sosmed (kb)\t Kuota lainnya (kb)\t Tagihan kuota terpakai (Rp)\t Tagihan/minggu (Rp)')
+print('Minggu ke-\t Total tagihan pulsa (Rp)\t Total tagihan kuota (Rp)\t Tagihan/minggu (Rp)')
 
 for i in range(0,len(data)):
-    print(data[i][0],'\t', data[i][1], '\t',data[i][2], '\t',data[i][3], '\t',data[i][4], '\t',data[i][5], '\t',data[i][6], '\t',data[i][7], '\t',data[i][8])
+    print(data[i][0],'\t',data[i][4], '\t\t',data[i][7], '\t\t',data[i][8])
     i += 1
 
 print("--------------------------------------------------------------------------------")
