@@ -1,5 +1,6 @@
 import csv
 
+#bagian penentuan potongan harga
 def discount(jumlah_tagihan):
     if jumlah_tagihan >= 250000:
         return jumlah_tagihan - 25000,25000
@@ -8,17 +9,16 @@ def discount(jumlah_tagihan):
     else:
         return jumlah_tagihan, 0
 
-    #mulai program
+#mulai program
 input_data = True
 nama_file = "tagihan2.csv"
 data = []
 nama = input("Nama : ")
 no_telp = input("No. Telepon: ")
 
-while input_data:
+while input_data: #iterasi data
     answer = input("Apakah anda ingin menginput data pulsa dan kuota anda (data per minggu)? (y/n) ")
     if answer != "y":
-
         break
     minggu = input("Untuk minggu ke: ")
     total_sms = int(input("Jumlah SMS : "))
@@ -33,10 +33,11 @@ while input_data:
     totalpulsa = pulsasms + totalpulsatlp
     total_tagihan = totalkuota2 + totalpulsa
     
+    #penambahan data ke dalam list
     data.append([minggu,total_sms,menit_tlp_sama,menit_tlp_lain,totalpulsa,total_kuota_sosmed,total_kuota_lainnya,totalkuota2,total_tagihan])
 
 print("--------------------------------------------------------------------------------")
-
+#tabel pada program
 print('Minggu ke-\t Jumlah SMS\t Menit telepon ke sesama operator\t Menit telepon ke operator lain\t Total pulsa (Rp)\t Kuota sosmed (kb)\t Kuota lainnya (kb)\t Tagihan kuota terpakai (Rp)\t Tagihan/minggu (Rp)')
 
 for i in range(0,len(data)):
@@ -44,7 +45,7 @@ for i in range(0,len(data)):
     i += 1
 
 print("--------------------------------------------------------------------------------")
-
+#export ke csv
 with open(nama_file, 'w') as outf:
     header = ['Minggu ke-','Jumlah SMS','Menit telepon ke sesama operator','Menit telepon ke operator lain','Total pulsa (Rp)','Kuota sosmed (kb)','Kuota lainnya (kb)','Tagihan kuota terpakai (Rp)','Tagihan/minggu (Rp)']
     writer = csv.DictWriter(outf, fieldnames=header)
@@ -69,7 +70,7 @@ for row in data:
 
 jml_minggu = len(data)
 tagihan_akhir,potongan = discount(jumlah_tagihan)
-
+#akhir
 print("Jumlah tagihan", nama, "dengan No. telepon", no_telp, "selama", jml_minggu ,"minggu adalah sebesar Rp.", jumlah_tagihan)
 print("Anda mendapatkan potongan sebesar", potongan, "maka jumlah akhir tagihan anda adalah", tagihan_akhir)
         
