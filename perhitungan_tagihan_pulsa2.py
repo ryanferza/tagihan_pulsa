@@ -57,7 +57,7 @@ with open(nama_file, 'w') as outf:
                          'Jumlah SMS': total_sms,
                          'Menit telepon ke sesama operator': menit_tlp_sama,
                          'Menit telepon ke operator lain': menit_tlp_lain,
-                         'Total pulsa (Rp)': total_pulsa,
+                         'Total pulsa (Rp)': totalpulsa,
                          'Kuota sosmed (kb)': total_kuota_sosmed,
                          'Kuota lainnya (kb)': total_kuota_lainnya,
                          'Tagihan kuota terpakai (Rp)': totalkuota2,
