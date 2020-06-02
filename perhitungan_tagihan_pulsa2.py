@@ -41,7 +41,7 @@ print("-------------------------------------------------------------------------
 print('Minggu ke-\t Total tagihan pulsa (Rp)\t Total tagihan kuota (Rp)\t Tagihan/minggu (Rp)')
 
 for i in range(0,len(data)):
-    print(data[i][0],'\t',data[i][4], '\t\t',data[i][7], '\t\t',data[i][8])
+    print(data[i][0],'\t''\t', data[i][4], '\t''\t''\t', data[i][7],'\t''\t''\t', data[i][8])
     i += 1
 
 print("--------------------------------------------------------------------------------")
