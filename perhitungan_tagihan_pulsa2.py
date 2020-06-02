@@ -28,8 +28,8 @@ while input_data: #iterasi data
     total_kuota_lainnya = float(input("Jumlah kuota terpakai untuk lainnya (kb): "))
     totalkuota1 = total_kuota_sosmed + total_kuota_lainnya
     totalkuota2 = 5*totalkuota1
-    totalpulsatlp = 250*menit_tlp_sama + 500*menit_tlp_lain
-    pulsasms = 150*total_sms
+    totalpulsatlp = 70*menit_tlp_sama + 100*menit_tlp_lain
+    pulsasms = 50*total_sms
     totalpulsa = pulsasms + totalpulsatlp
     total_tagihan = totalkuota2 + totalpulsa
     
