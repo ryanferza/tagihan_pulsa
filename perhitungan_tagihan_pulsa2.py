@@ -45,6 +45,19 @@ for i in range(0,len(data)):
     i += 1
 
 print("--------------------------------------------------------------------------------")
+
+list_tagihan = [data[i][8] for i in range(len(data))]
+jumlah_tagihan = 0
+for row in data:
+    jumlah_tagihan += row[8]
+
+jml_minggu = len(data)
+tagihan_akhir,potongan = discount(jumlah_tagihan)
+#akhir
+print("Jumlah tagihan", nama, "dengan No. telepon", no_telp, "selama", jml_minggu ,"minggu adalah sebesar Rp.", jumlah_tagihan)
+print("Anda mendapatkan potongan sebesar", potongan, "maka jumlah akhir tagihan anda adalah", tagihan_akhir)
+input("Keluar program (ketik apapun) ")
+
 #export ke csv
 with open(nama_file, 'w') as outf:
     header = ['Minggu ke-','Jumlah SMS','Menit telepon ke sesama operator','Menit telepon ke operator lain','Total pulsa (Rp)','Kuota sosmed (kb)','Kuota lainnya (kb)','Tagihan kuota terpakai (Rp)','Tagihan/minggu (Rp)']
@@ -63,14 +76,3 @@ with open(nama_file, 'w') as outf:
                          'Tagihan kuota terpakai (Rp)': totalkuota2,
                          'Tagihan/minggu (Rp)': total_tagihan
                         })
-list_tagihan = [data[i][8] for i in range(len(data))]
-jumlah_tagihan = 0
-for row in data:
-    jumlah_tagihan += row[8]
-
-jml_minggu = len(data)
-tagihan_akhir,potongan = discount(jumlah_tagihan)
-#akhir
-print("Jumlah tagihan", nama, "dengan No. telepon", no_telp, "selama", jml_minggu ,"minggu adalah sebesar Rp.", jumlah_tagihan)
-print("Anda mendapatkan potongan sebesar", potongan, "maka jumlah akhir tagihan anda adalah", tagihan_akhir)
-        
