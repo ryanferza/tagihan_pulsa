@@ -8,11 +8,10 @@ def discount(jumlah_tagihan):
         return jumlah_tagihan - 10000,10000
     else:
         return jumlah_tagihan, 0
-print("================================================================================================")
-print("                             SELAMAT DATANG DI PROGRAM TAGIHAN PULSA                            ")
-print("program ini bertujuan untuk memudahkan tagihan pulsa yang harus dibayarkan dalam hitungan minggu") 
-print("minggu yang diinput harus berurutan!")
-print("================================================================================================")    
+print("=========================================================================================")
+print("                             SELAMAT DATANG DI PROGRAM TAGIHAN PULSA                      ")
+print("program ini bertujuan untuk memudahkan tagihan pulsa yang harus dibayarkan dalam hitungan minggu, minggu yang diinput harus berurutan!") 
+print("=========================================================================================")  
         
 #mulai program
 input_data = True
