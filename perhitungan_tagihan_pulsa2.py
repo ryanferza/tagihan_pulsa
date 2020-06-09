@@ -20,10 +20,28 @@ nama_file = datetime.now().strftime(f'{nama}_%d_%m_%y-%H_%M_%S.csv')
 count = 0
 input_data = True
 
-
-
-
-
+while input_data: #iterasi data
+    answer = input("Apakah anda ingin menginput data pulsa dan kuota anda (data per minggu)? (y/n) ")
+    if answer != "y":
+        break
+    minggu = int(input("Untuk minggu ke: "))
+    if minggu != count+1:
+            print("- minggu yang diinput tidak sesuai/berurut -")
+            continue
+    total_sms = int(input("Jumlah SMS : "))
+    menit_tlp_sama = float(input("Jumlah menit telepon anda ke sesama operator: "))
+    menit_tlp_lain = float(input("Jumlah menit telepon anda ke lain operator: "))
+    total_kuota_sosmed = float(input("Jumlah kuota terpakai untuk sosial media (kb): "))
+    total_kuota_lainnya = float(input("Jumlah kuota terpakai untuk lainnya (kb): "))
+    totalkuota1 = total_kuota_sosmed + total_kuota_lainnya
+    totalkuota2 = 0.005*totalkuota1
+    totalpulsatlp = 70*menit_tlp_sama + 100*menit_tlp_lain
+    pulsasms = 50*total_sms
+    totalpulsa = pulsasms + totalpulsatlp
+    total_tagihan = totalkuota2 + totalpulsa
+    count += 1
+    #penambahan data ke dalam list
+    data.append([minggu,total_sms,menit_tlp_sama,menit_tlp_lain,totalpulsa,total_kuota_sosmed,total_kuota_lainnya,totalkuota2,total_tagihan])
 
 print("--------------------------------------------------------------------------------")
 #tabel pada program
