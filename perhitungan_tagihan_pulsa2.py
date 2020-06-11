@@ -4,7 +4,7 @@ from datetime import datetime
 
 print("===========================================================================")
 print("             SELAMAT DATANG DI PROGRAM TAGIHAN PULSA             ")
-print("Program ini bertujuan untuk menghitung tagihan pulsa perminggu dengan menginput minggu yang berurutan dimulai dari minggu pertama!")
+print("Program ini bertujuan untuk menghitung tagihan pulsa perminggu dengan menginput minggu yang berurutan dimulai dari minggu pertama (1)!")
 print("===========================================================================")
 
 
