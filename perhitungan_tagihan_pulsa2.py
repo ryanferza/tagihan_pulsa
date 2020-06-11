@@ -48,7 +48,7 @@ while input_data: #iterasi data
     pulsasms = 50*total_sms
     totalpulsa = pulsasms + totalpulsatlp
     total_tagihan = totalkuota2 + totalpulsa
-    count += 1
+    count += 1 #count akan bertambah satu setiap penginputan
     #penambahan data ke dalam list
     data.append([minggu,total_sms,menit_tlp_sama,menit_tlp_lain,totalpulsa,total_kuota_sosmed,total_kuota_lainnya,totalkuota2,total_tagihan])
 
