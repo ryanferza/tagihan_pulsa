@@ -1,7 +1,14 @@
 import csv
 from datetime import datetime
 
-print("Kalkulasi Tagihan Pulsa dan Kuota Mingguan")
+
+print("===========================================================================")
+print("             SELAMAT DATANG DI PROGRAM TAGIHAN PULSA             ")
+print("Program ini bertujuan untuk menghitung tagihan pulsa perminggu dengan menginput minggu yang berurutan dimulai dari minggu pertama!")
+print("===========================================================================")
+
+
+
 print("-inputlah data-data anda-")
 #bagian penentuan potongan harga
 def discount(jumlah_tagihan):
