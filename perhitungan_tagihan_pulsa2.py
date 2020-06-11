@@ -23,11 +23,13 @@ input_data = True
 while input_data: #iterasi data
     answer = input("Apakah anda ingin menginput data pulsa dan kuota anda (data per minggu)? (y/n) ")
     if answer != "y":
-        break
+        break #keluar dari iterasi/while
+        
     minggu = int(input("Untuk minggu ke: "))
     if minggu != count+1:
             print("- minggu yang diinput tidak sesuai/berurut -")
-            continue
+            continue #kembali ke awal iterasi/while
+            
     total_sms = int(input("Jumlah SMS : "))
     menit_tlp_sama = float(input("Jumlah menit telepon anda ke sesama operator: "))
     menit_tlp_lain = float(input("Jumlah menit telepon anda ke lain operator: "))
