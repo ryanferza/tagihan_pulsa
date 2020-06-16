@@ -155,8 +155,20 @@ def menu():
         elif pilihan == ("2"):
             cekdata()
         
-    
-    
 #menu keluar
 def keluar():
+    print("")
+    print("(1) Kembali ke menu utama")
+    print("(2) Keluar program")
+    pilihan = input("> ")
+    
+    if pilihan == "2":
+        return False #program selesai
+    elif pilihan == "1":
+        return True #kembali ke menu utama
+
+con = True #saat program sedang berjalan = con
+while con:
+    menu() #def menu jalan terlebih dahulu
+    con = keluar() #setelah selesai programming ke def keluar
 
