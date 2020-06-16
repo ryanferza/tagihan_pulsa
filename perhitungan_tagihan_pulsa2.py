@@ -17,7 +17,7 @@ def inputdata():
     #mulai penginputan data untuk menjadi list
     data = []
     nama = input("Nama : ")
-    no_telp = input("No. Telepon: ")
+    no_telp = int(input("No. Telepon: "))
     nama_file = datetime.now().strftime(f'{nama}_{no_telp}_%m.csv')
     count = 0
     input_data = True
@@ -93,7 +93,7 @@ def cekdata():
         #bagian input untuk membuka file
     try:
         nama = input("Nama: ")
-        no_telp = input("No. Telepon: ")
+        no_telp = int(input("No. Telepon: "))
         bulan = input("Bulan saat menginput data (01-12): ")
         nama_file = f'{nama}_{no_telp}_{bulan}.csv'
         data = []
