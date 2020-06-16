@@ -60,7 +60,6 @@ def inputdata():
     tagihan_akhir,potongan = discount(jumlah_tagihan)
     print("Jumlah tagihan", nama, "dengan No. telepon", no_telp, "selama", jml_minggu ,"minggu adalah sebesar Rp.", jumlah_tagihan)
     print("Anda mendapatkan potongan sebesar", potongan, "maka jumlah akhir tagihan anda adalah", tagihan_akhir)
-    input("Keluar program (ketik apapun) ")
 
     #export list ke bentuk csv
     with open(nama_file, 'w') as outf:
