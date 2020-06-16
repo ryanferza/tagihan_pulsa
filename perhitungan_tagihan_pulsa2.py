@@ -83,7 +83,14 @@ def inputdata():
             
 #menu ke (2) untuk mengecek data yang sudah pernah diinput
 def cekdata():
-
+#bagian pemotongan harga pada menu cek data
+    def discount(jumlah_tagihan):
+        if jumlah_tagihan >= 250000:
+            return jumlah_tagihan - 25000, 25000
+        elif jumlah_tagihan >= 100000:
+            return jumlah_tagihan - 10000, 10000
+        else:
+            return jumlah_tagihan, 0
     
 #menu utama
 def menu():
