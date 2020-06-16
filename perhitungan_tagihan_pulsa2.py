@@ -91,6 +91,51 @@ def cekdata():
             return jumlah_tagihan - 10000, 10000
         else:
             return jumlah_tagihan, 0
+        #bagian input untuk membuka file
+    try:
+        nama = input("Nama: ")
+        no_telp = input("No. Telepon: ")
+        bulan = input("Bulan saat menginput data (01-12): ")
+        nama_file = f'{nama}_{no_telp}_{bulan}.csv'
+        data = []
+        
+        with open(nama_file) as csvfile:
+            readCSV = csv.reader(csvfile, delimiter=',')
+            line_count = 0
+            
+            for row in readCSV:
+                
+                if line_count == 0 or row == []:
+                    line_count +=1
+                    continue
+                else:
+                    data.append(row)
+            
+        csvfile.close()
+        print("--------------------------------------------------------------------------------")
+        print('Minggu ke-\t Total tagihan pulsa (Rp)\t Total tagihan kuota (Rp)\t Tagihan/minggu (Rp)')
+
+        for i in range(0,len(data)):
+            print(data[i][0],'\t''\t', data[i][4], '\t''\t''\t', data[i][7],'\t''\t''\t', data[i][8])
+            i += 1
+
+        print("--------------------------------------------------------------------------------")
+    
+        #perhitungan jumlah tagihan dari minggu terhitung
+        jumlah_tagihan = 0
+        for row in data:
+            jumlah_tagihan += float(row[8])
+            
+        jml_minggu = len(data)
+        tagihan_akhir, potongan = discount(jumlah_tagihan)
+    
+        #print kalimat jumlah tagihan
+        print("Jumlah tagihan", nama, "dengan No. telepon", no_telp, "selama", jml_minggu ,"minggu adalah sebesar Rp.", jumlah_tagihan)
+        print("Anda mendapatkan potongan sebesar", potongan, "maka jumlah akhir tagihan anda adalah", tagihan_akhir)
+        #Kembali ke menu utama
+    
+    except FileNotFoundError:
+        print("File tidak dapat ditemukan")
     
 #menu utama
 def menu():
