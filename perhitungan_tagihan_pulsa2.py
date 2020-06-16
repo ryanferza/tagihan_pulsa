@@ -1,12 +1,6 @@
 import csv
 from datetime import datetime
 
-
-print("===========================================================================")
-print("             SELAMAT DATANG DI PROGRAM TAGIHAN PULSA             ")
-print("Program ini bertujuan untuk menghitung tagihan pulsa perminggu dengan menginput minggu yang berurutan dimulai dari minggu pertama (1)!")
-print("===========================================================================")
-
 #menu ke (1) untuk menginput data jika pelanggan belum pernah menginput
 def inputdata():
     
