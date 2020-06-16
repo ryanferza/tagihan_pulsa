@@ -139,6 +139,22 @@ def cekdata():
     
 #menu utama
 def menu():
+        print("---------------------------------------------------")
+        print("      SELAMAT DATANG DI PROGRAM TAGIHAN PULSA      ")
+        print("---------------------------------------------------")
+        print("Program Perhitungan Tagihan Pulsa dalam Mingguan")
+        print("Silahkan pilih menu yang anda inginkan")
+        print("(1) Input data per minggu")
+        print("(2) Cek data anda")
+        
+        pilihan = input("> ")
+    
+        if pilihan == ("1"):
+            inputdata()
+        
+        elif pilihan == ("2"):
+            cekdata()
+        
     
     
 #menu keluar
