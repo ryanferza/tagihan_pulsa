@@ -1,5 +1,12 @@
 # Program Perhitungan Tagihan Pulsa
-Program Perhitungan Tagihan Pulsa adalah program yang digunakan untuk menghitung tagihan pulsa selama minggu yang diinginkan.Data hasil running akan berbentuk tabel pada program 
+Program Perhitungan Tagihan Pulsa adalah program yang digunakan untuk menghitung tagihan pulsa selama minggu yang diinginkan.Data hasil running akan berbentuk tabel pada program.
+Program ini di susun oleh :
+- Wulan Istifarrosa (I0318093)
+- Nur Oktaviani ( I0319082 )
+- Rifa'atul Jazilah (I0319090)
+- Ryan Ferza (I0319093)
+- Shabrina Chairunnisaa (I0319099)
+- Wafiq Hasan (I0319108)
 
 # Persyaratan 
 - Memiliki Windows,Linux, atau Mac OS
